@@ -1,0 +1,54 @@
+doctype
+html
+	head
+		title #{title}
+		script(type='text/javascript')
+			var local_move =!{JSON.stringify(move)}
+		script(src='/js/jquery-1.9.1.js')
+		script(src='/socket.io/socket.io.js')
+		script(src='/bootstrap/js/bootstrap.js')
+		link(href='/bootstrap/css/bootstrap.css', rel='stylesheet')  
+		script(src='/js/gamepage.js')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		
+	body
+	.screenMask
+	div(class='modal fade', id='myModal')
+		.modal-header
+			a(class='close', data-dismiss='modal') *
+			h3 Welcome
+		.modal-body
+			p.get-name
+				| Name:&nbsp;&nbsp;
+				input(type="text", id="name")
+			p.get-role Enter as:
+			fieldset
+				.some-class
+					input(type='radio', name='role', value='player1', id='player1')
+					label(for='player1', class='player1') &nbsp;player 1
+					input(type='radio', name='role', value='player2', id='player2')
+					label(for='player2', class='player2') &nbsp;player 2
+					input(type='radio', name='role', value='observer', id='observer')
+					label(for='observer', class='observer') &nbsp;observer
+
+		.modal-footer
+			a(href='#', class='btn btn-primary', data-dismiss='modal') Enter
+
+	#main_content
+		#left_col
+			h3 Game Content
+			table(border='1', id='table')
+				- for (var i=0; i < 6; ++i)
+					tr
+						- for (var j=0; j < 7; ++j)
+							- if (board[6*j + (6-i-1)] == 1)
+								td(class="player1")
+							- else if (board[6*j + (6-i-1)] == 2)
+								td(class="player2")
+							- else
+								td
+		#right_col
+			h3 Chat
+			p#chatBox
+			input(type='text', id='message', name='message')
+			input(type='button', id='btnPostMessage', value='Say Something', onclick='postMessage()')

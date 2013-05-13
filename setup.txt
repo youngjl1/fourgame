@@ -1,0 +1,14 @@
+Directions of setting up app
+
+1. download and extract folder to c:\
+2. download and install Node.js
+3. Open windows powershell, go to "chat" directory using cd
+4. Run: npm install express
+5. Run: npm install nodemon -g
+6. Run: npm index.js
+7. Open browser and go to: http://localhost:3000/
+
+Additional steps for chat to work
+8. Run ipconfig and copy down IpV4address
+9. Go to http://[your IpV4address]:3000/
+10: Update the link in fe_index.js to match

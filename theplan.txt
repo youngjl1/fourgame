@@ -1,0 +1,27 @@
+dictionaries
+	roles[socket.ID] - to know a socket's role
+	names[socket.id] - to know a socket's name
+	urls[socket.id] - to know a socket's table/room
+	games[url] - to know a table/room's game state
+
+
+eliminate gameId's for socket IDs	
+	
+initialLoad -> replace with jade data
+	-add/verify game based on URL
+	including which roles are taken, who's move is it, and board state
+enterPlayer -> JoinRoom
+	add roll, url
+	add to room/channel
+sendMove
+	validate
+	emit broadcastMove
+messageFromClient -> sendMessage
+	validate
+	emit broadcastMessage
+unloadEvent -> Disconnect
+	remove from room/channel
+	remove from roles/url
+	
+	
+	

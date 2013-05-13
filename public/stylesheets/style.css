@@ -1,0 +1,82 @@
+#main_content{
+	width:80%;
+	margin-left: auto ;
+    margin-right: auto ;
+}
+
+#left_col{
+	float:left;
+	width:70%;
+	background-color:#EEE;
+	margin: 5px;
+	padding: 5px;
+	border:1px solid black;
+}
+
+#right_col{
+	float:left;
+	width:25%;
+	background-color:#EEE;
+	margin: 5px;
+	padding: 5px;
+	border:1px solid black;
+}
+
+#chatBox{
+	overflow: auto;
+	height: 200px;
+}
+
+td{
+	width:50px;
+	min-height:50px;
+	height: 50px;
+	background-color:white;
+}
+
+td.player1{
+	background-image:url('/images/redCoin.png');
+}
+
+td.player2{
+	background-image:url('/images/blueCoin.png');
+}
+
+div.screenMask
+{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: #000000;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+fieldset { overflow:hidden }
+.some-class { float:left; clear:none; }
+label { float:left; clear:none; display:block; padding: 2px 1em 0 0; }
+input[type=radio], input.radio { float:left; clear:none; margin: 2px 0 0 2px; }
+
+.player1{
+	color:red;
+	font-weight:bold;
+}
+.player2{
+	color:blue;
+	font-weight:bold;
+}
+.observer{
+	color:#333;
+	font-weight:bold;
+}
+
+.red{ color:red}
+.bold{ font-weight:bold;}
+
+.message{
+	vertical-align:baseline;
+}
+

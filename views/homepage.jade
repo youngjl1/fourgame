@@ -1,0 +1,18 @@
+doctype
+html
+	head
+		title #{title}
+		script(src='/js/jquery-1.9.1.js')
+		script(src='/bootstrap/js/bootstrap.js')
+		link(href='/bootstrap/css/bootstrap.css', rel='stylesheet')  
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		
+	body
+
+	#main_content
+		h1 The Game Table
+		p Free and anonymous multiplayer
+		
+		form(method='post', action='/')
+			button(type='submit', class='btn btn-primary') Play Four-in-a-Row
+				
