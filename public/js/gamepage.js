@@ -1,5 +1,4 @@
 var socket = io.connect();		 
-var test;
 
 var global = {
 	name: '',
