@@ -4,8 +4,6 @@ utils = require('./lib/utils')
 var http = require('http');
 var path = require('path');
 
-var uuid = require('node-uuid');
-
 var app = express(); 
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);

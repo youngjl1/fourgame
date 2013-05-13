@@ -24,4 +24,8 @@ unloadEvent -> Disconnect
 	remove from roles/url
 	
 	
-	
+github basics:
+git push origin master
+git status
+git commit
+git commit -a //does all files
